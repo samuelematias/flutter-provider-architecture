@@ -1,16 +1,39 @@
-# flutter_provider_architecture
+<!-- header section -->
+<p align="center">
+  <img src="https://i.imgur.com/5ml3X20.png" height="224" /><br/>
+  <span><b>Flutter Provider Architecture</b></span><br/>
+  <span>Mobile Application Developed in <b>Flutter.</b></span><br/>
+  <span>Running on both mobile platforms, <b>Android 🤖</b> & <b>iOS 🍎</b>. </span><br/>
+</p>
+<!-- header section END -->
 
-A new Flutter project.
+<br/>
+<!-- show case/gif section -->
+<p align="center">
+    <img alt="Flutter App 1" height="620" src="https://media.giphy.com/media/ZFKTGLsDg69Gx6zhOd/giphy.gif" />
+</p>
+<!-- show case/gif section END -->
 
-## Getting Started
+<br/>
 
-This project is a starting point for a Flutter application.
+<!-- about app and course section -->
 
-A few resources to get you started if this is your first Flutter project:
+## About this app
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+This app was developed from the tutorial [Flutter Provider Architecture for State Management](https://www.youtube.com/watch?v=kDEflMYTFlk&list=PLdTodMosi-BwEwlzjN6EyS1vwGXFo-UlK&index=2)<br/>
+This is a example app to show the base architecture for small/medium/large/big large scale using Provider as State Management with Get It!
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+- [Dart](https://dart.dev/)
+- [Flutter](https://flutter.dev/)
+
+## Plugins
+
+- [provider](https://pub.dev/packages/provider)
+- [get_it](https://pub.dev/packages/get_it)
+- [http](https://pub.dev/packages/http)
+
+<br/>
+
+<!-- about app and course section END -->
