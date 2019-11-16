@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Provider Architecture',
-        theme: ThemeData(),
+        theme: ThemeData(
+          brightness: Brightness.light,
+        ),
         initialRoute: '/login',
         onGenerateRoute: Router.generateRoute,
       ),
