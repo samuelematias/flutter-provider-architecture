@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider_architecture/core/enum/viewstate.dart';
 import 'package:flutter_provider_architecture/core/viewmodels/login_model.dart';
 import 'package:flutter_provider_architecture/locator.dart';
 import 'package:flutter_provider_architecture/ui/shared/app_colors.dart';
