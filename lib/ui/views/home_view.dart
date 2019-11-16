@@ -20,7 +20,9 @@ class HomeView extends StatelessWidget {
           Scaffold(
         backgroundColor: backgroundColor,
         body: model.state == ViewState.Busy
-            ? CircularProgressIndicator()
+            ? Center(
+                child: CircularProgressIndicator(),
+              )
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
