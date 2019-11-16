@@ -13,9 +13,12 @@ class LoginModel extends BaseModel {
     setState(ViewState.Busy);
     var userId = int.tryParse(userIdText);
 
-    //Not a number
     if (userId == null) {
       errorMessage = 'Value entered is not a number.';
+      setState(ViewState.Idle);
+      return false;
+    } else if (userId <= 0 || userId > 10) {
+      errorMessage = 'number must between 1- 10.';
       setState(ViewState.Idle);
       return false;
     }
