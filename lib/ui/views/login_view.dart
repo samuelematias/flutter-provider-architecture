@@ -44,7 +44,7 @@ class _LoginViewState extends State<LoginView> {
                             var loginSuccess =
                                 await model.login(_controller.text);
                             if (loginSuccess) {
-                              // Navigate to the home view
+                              Navigator.pushNamed(context, '/');
                             }
                           },
                         ),

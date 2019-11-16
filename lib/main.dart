@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_architecture/locator.dart';
-import 'package:flutter_provider_architecture/ui/views/login_view.dart';
+import 'package:flutter_provider_architecture/ui/router.dart';
 
 void main() {
   setupLocator();
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Provider Architecture',
       theme: ThemeData(),
-      home: LoginView(),
+      initialRoute: '/login',
+      onGenerateRoute: Router.generateRoute,
     );
   }
 }
