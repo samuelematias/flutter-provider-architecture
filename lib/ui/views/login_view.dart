@@ -29,6 +29,7 @@ class _LoginViewState extends State<LoginView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   LoginHeader(
+                    validationMessage: model.errorMessage,
                     controller: _controller,
                   ),
                   model.state == ViewState.Busy

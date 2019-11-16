@@ -13,6 +13,12 @@ class LoginModel extends BaseModel {
     setState(ViewState.Busy);
     var userId = int.tryParse(userIdText);
 
+    //Not a number
+    if (userId == null) {
+      errorMessage = 'Value entered is not a number.';
+      setState(ViewState.Idle);
+      return false;
+    }
     var success = await _authenticationService.login(userId);
 
     // Handle additional error here. Put the abouve login.
