@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_architecture/core/viewmodels/login_model.dart';
 import 'package:flutter_provider_architecture/locator.dart';
+import 'package:flutter_provider_architecture/ui/shared/app_colors.dart';
+import 'package:flutter_provider_architecture/ui/widgets/login_header.dart';
 import 'package:provider/provider.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
+  @override
+  _LoginViewState createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<LoginModel>(
@@ -11,8 +19,33 @@ class LoginView extends StatelessWidget {
       child: Consumer<LoginModel>(
         builder: (BuildContext context, LoginModel model, Widget child) =>
             Scaffold(
-                // backgroundColor: ,
-                ),
+          backgroundColor: backgroundColor,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              LoginHeader(
+                controller: _controller,
+              ),
+              model.state == ViewState.Busy
+                  ? CircularProgressIndicator()
+                  : FlatButton(
+                      color: Colors.white,
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                      onPressed: () async {
+                        var loginSuccess = await model.login(_controller.text);
+                        if (loginSuccess) {
+                          // Navigate to the home view
+                        }
+                      },
+                    ),
+            ],
+          ),
+        ),
       ),
     );
   }
