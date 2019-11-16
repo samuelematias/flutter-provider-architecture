@@ -20,30 +20,37 @@ class _LoginViewState extends State<LoginView> {
         builder: (BuildContext context, LoginModel model, Widget child) =>
             Scaffold(
           backgroundColor: backgroundColor,
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              LoginHeader(
-                controller: _controller,
-              ),
-              model.state == ViewState.Busy
-                  ? CircularProgressIndicator()
-                  : FlatButton(
-                      color: Colors.white,
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          color: Colors.black,
+          body: GestureDetector(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Container(
+              color: Colors.transparent,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  LoginHeader(
+                    controller: _controller,
+                  ),
+                  model.state == ViewState.Busy
+                      ? CircularProgressIndicator()
+                      : FlatButton(
+                          color: Colors.white,
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          onPressed: () async {
+                            var loginSuccess =
+                                await model.login(_controller.text);
+                            if (loginSuccess) {
+                              // Navigate to the home view
+                            }
+                          },
                         ),
-                      ),
-                      onPressed: () async {
-                        var loginSuccess = await model.login(_controller.text);
-                        if (loginSuccess) {
-                          // Navigate to the home view
-                        }
-                      },
-                    ),
-            ],
+                ],
+              ),
+            ),
           ),
         ),
       ),
