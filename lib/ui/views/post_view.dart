@@ -16,6 +16,14 @@ class PostView extends StatelessWidget {
     User user = Provider.of<User>(context);
     return Scaffold(
       backgroundColor: backgroundColor,
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: backgroundColor,
+        elevation: 0,
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
