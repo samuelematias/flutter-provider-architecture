@@ -15,9 +15,6 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return BaseView<LoginModel>(
-      onModelReeady: (model) {
-        /* Call something on the model */
-      },
       builder: (BuildContext context, LoginModel model, Widget child) =>
           Scaffold(
         backgroundColor: backgroundColor,
