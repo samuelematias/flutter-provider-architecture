@@ -23,6 +23,7 @@ class PostView extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
+        brightness: Brightness.light,
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
