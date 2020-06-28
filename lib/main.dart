@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamProvider<User>(
       initialData: User.initial(),
-      builder: (BuildContext context) =>
+      create: (BuildContext context) =>
           locator<AuthenticationService>().userController.stream,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
